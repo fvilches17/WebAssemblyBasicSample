@@ -1,10 +1,17 @@
 static int count = 0;
 
-int MyCLanguageCounterFunction(int increaseValue) { 
+int MyCLanguageCounterFunction(int increaseValue)
+{
   count = increaseValue + count;
   return count;
 }
 
-int MyCLanguageDoItFunction() { 
+void MyCLanguageResetCountFunction()
+{
+  count = 0;
+}
+
+int MyCLanguageDoItFunction()
+{
   return 42;
 }
