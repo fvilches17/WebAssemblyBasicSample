@@ -1,7 +1,7 @@
 const doItButton = document.querySelector("#btn-doit");
 const counterButton = document.querySelector("#btn-count");
-const doItDisplayElement = document.querySelector("#display-area-doit p");
-const counterDisplayElement = document.querySelector("#display-area-count p");
+const doItDisplayArea = document.querySelector("#display-area-doit");
+const counterDisplayArea = document.querySelector("#display-area-count");
 const importObject = { imports: { imported_func: arg => console.log(arg) } };
 
 fetch('index.wasm').then(response =>
@@ -9,12 +9,14 @@ fetch('index.wasm').then(response =>
 ).then(bytes =>
     WebAssembly.instantiate(bytes, importObject)
 ).then(results => {
+    const wasmExports = results.instance.exports;
+
     doItButton.onclick = ()=> {
-        doItDisplayElement.innerText = results.instance.exports.MyCLanguageDoItFunction();
+        doItDisplayArea.innerText = wasmExports.MyCLanguageDoItFunction();
     }
 
     counterButton.onclick = ()=> {
-        counterDisplayElement.innerText = results.instance.exports.MyCLanguageCounterFunction(1);
+        counterDisplayArea.innerText = wasmExports.MyCLanguageCounterFunction(1);
     }
 
 }).catch(console.error);
