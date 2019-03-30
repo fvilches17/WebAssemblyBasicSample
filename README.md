@@ -9,7 +9,7 @@ This repository aims to serve as an introductory sample for developers getting s
 2. In the Workspace directory run the command npm start
 
 ## Authors
-Francisco Vilches - https://github.com/fvilches17
+Francisco Vilches - https://github.com/fvilches17 <br/>
 Prabakaran Veer - https://github.com/veerprabakar
 
 ## Notes
