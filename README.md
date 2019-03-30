@@ -1,5 +1,7 @@
 # WebAssemblyBasicSample
-This is a very basic website with the sole purpose of introducing developers to Web Assembly
+This repository aims to serve as an introductory sample for developers getting started on Web Assembly. It contains a basic website which can load wasm files. The wasm is derived from C code and contains 2 functions: one for updating a counter variable, and another which returns the number 42. These 2 functions are called from JavaScript in order to update the DOM.
+
+<img src="website-display.png" />
 
 ## Getting Started
 
