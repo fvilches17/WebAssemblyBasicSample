@@ -1,5 +1,5 @@
-"use strict";
 (async function() {
+    "use strict";
     const doItButton = document.querySelector("#btn-doit");
     const counterButton = document.querySelector("#btn-count");
     const resetButton = document.querySelector("#btn-reset");
